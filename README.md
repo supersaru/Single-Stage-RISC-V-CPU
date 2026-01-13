@@ -1,6 +1,5 @@
 # Single cycle RISC-V CPU
-A basic attempt to build a RISC-V processor so I can learn more about digital logic design and computer architecture.
-
+A basic attempt to build a RISC-V processor so I can learn more about digital logic design and computer architecture. Uses [This project](https://github.com/0BAB1/HOLY_CORE_COURSE) as a model.
   - [x] Program Counter
     - [x] Testbench
   - [x] Instruction Memory
@@ -14,6 +13,5 @@ A basic attempt to build a RISC-V processor so I can learn more about digital lo
   - [ ] Data Memory
     - [ ] Testbench
   - [ ] FPGA Syth
-  - [ ] C Code/Assembly
+  - [x] C Code/Assembly
   
-Uses [This Project](https://github.com/EkthaReddy/RISC-V-Single-Cycle-Processor/tree/main) as a reference.
