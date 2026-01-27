@@ -1,10 +1,10 @@
 # Makefile
 
 # defaults
-SIM ?= verilator
+SIM ?= questa
 TOPLEVEL_LANG ?= verilog
 
-VERILOG_SOURCES += $(PWD)src/alu.sv
+VERILOG_INCLUDE_DIRS += ../../src/
 
 COCOTB_TOPLEVEL = ALU
 

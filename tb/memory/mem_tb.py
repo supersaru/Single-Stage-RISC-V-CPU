@@ -11,7 +11,7 @@ async def nrst_test(dut):
     assert int(dut.read_data) == 0
 
 @cocotb.test()
-async def mem_test(dut):
+async def write_test(dut):
     dut.write_enable = 1
     dut.address = random.randint(0, 0xFFFFFFFF)
     dut.byte_enable = 0x6F

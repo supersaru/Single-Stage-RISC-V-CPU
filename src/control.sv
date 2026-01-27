@@ -1,4 +1,5 @@
 //Control Unit
+`timescale 1ns/1ps
 
 module control (
   input logic [6:0] op,
@@ -17,4 +18,9 @@ module control (
   output logic [1:0] second_add_source
 );
 
+logic [1:0] alu_op;
+logic branch;
+logic jump;
 
+
+endmodule
