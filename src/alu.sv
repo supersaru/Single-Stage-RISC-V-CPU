@@ -1,9 +1,11 @@
 //Arithmetic Logic Unit
-module ALU (
+`timescale 1ns/1ps
+
+module alu (
   input logic [WIDTH-1:0] opA,
   input logic [WIDTH-1:0] opB,
 
-  input logic [3:0] opcode,
+  input logic [4:0] opcode,
 
   output logic [WIDTH-1:0] result,
 
@@ -13,44 +15,26 @@ module ALU (
   output logic overflow
 );
 
-//Add
-assign sum = opA + opB;
-
-//Subtract
-assign dif = opA - opB;
-
-//AND
-assign andop = opA & opB;
-
-//OR
-assign orop = opA | opB;
-
-//XOR
-assign xorop = opA ^ opB;
-
-//Left Shift
-assign shiftLeft = opA << opB;
-
-// Right Shift
-assign shiftRight = opA >> opB;
+parameter WIDTH = 32;
 
 always @(*)
 begin
   case (opcode)
-    3'b000: result = sum;
-    3'b001: result = dif;
-    3'b010: result = andop;
-    3'b011: result = orop;
-    3'b100: result = xorop;
-    3'b101: result = shiftLeft;
-    3'b111: result = shiftRight;
-    default: result = 0;
+    4'b0000 : result = opA + opB; //Sum
+    4'b0001 : result = opA - opB; //Diff
+    4'b0010 : result = opA & opB; //And
+    4'b0011 : result = opA || opB; //Or
+    4'b0100 : result = opA ^ opB; //xor
+    4'b0101 : result = opA >> opB; //shift left
+    4'b0111 : result = opA << opB; //shift right
+    default : result = 0;
   endcase
 end
 
+
 assign zero = (result == 0);
 
-assign carry = (sum[WIDTH] != 0);
+//assign carry_out = (sum[WIDTH] != 0);
 
 assign result = result;
 

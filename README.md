@@ -8,10 +8,13 @@ A basic attempt to build a RISC-V processor so I can learn more about digital lo
     - [ ] Testbench
   - [x] Arithmetic Logic Unit
     - [x] Testbench
+  - [ ] Load/Store Decoder
+    - [ ] Testbench
+  - [ ] Cache Reader
+    - [ ] Testbench
   - [x] Memory
     - [ ] Testbench
   - [x] Signext
     - [ ] Testbench  
   - [ ] FPGA Syth
   - [x] C Code/Assembly
-  
