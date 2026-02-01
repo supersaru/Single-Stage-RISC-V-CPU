@@ -97,3 +97,5 @@ _info
 **.qdb
 **.qpg
 **.qtl
+
+tb/*/sim_build

@@ -1,3 +1,5 @@
+`timescale 1ns/1ps
+
 module RegisterFile(
   input WE3, clk,
   input [4:0] A1,
